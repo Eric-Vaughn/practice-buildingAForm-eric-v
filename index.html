@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/submit" method="feedback">
+        <fieldset>
+            <legend>Account Info</legend>
+            <label for="full-name">Full name</label>
+                <input type="text" id="full-name">
+            <label for="email-address">Email address</label>
+                <input type="email" id="email-address" placeholder="email@example.com">
+            <label for="password">Password</label>
+                <input type = "password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            </fieldset> 
+        <fieldset>
+            <legend>Feedback & Contact Info</legend>
+            <label for="feedback">Feedback:</label>
+                <select id="feedback" name="feedback-category">
+                    <option value="awesome">Awesome</option>
+                    <option value="option">Ok</option>
+                    <option value="bad">Bad</option>
+                </select>
+            
+                <label for="contact-email">Email:</label>
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+            <label for="contact-phone">Phone:</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone"> 
+        </fieldset>
+        <fieldset>
+    <!--check box-->
+            <legend>Select from below:</legend>
+            <label for = "UI">UI</label>
+                <input type="checkbox" id="UI" name="interests" value="UI">
+            <label for = "design">Design</label>
+                <input type="checkbox" id="design" name="interests" value="design">
+            <label for = "responsiveness">Responsiveness</label>
+                <input type="checkbox" id="responsiveness" name="interests" value="responsiveness">
+    <!--text-->
+            <legend>Additional comments:</legend> 
+            <label for = "textarea">
+                <textarea id="textarea" name="textarea" rows="5" cols="30" placeholder="Write your message here"></textarea>
+            </label>  
+        </fieldset>
+
+    <!--submit button-->
+        <fieldset>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>
